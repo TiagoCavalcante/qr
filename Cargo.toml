@@ -7,3 +7,9 @@ description = "Command line QR code generator for those who love tools that just
 
 [dependencies]
 qrcode = { version = "0.12.0", default-features = false }
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
